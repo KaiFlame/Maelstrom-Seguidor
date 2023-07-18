@@ -1,13 +1,13 @@
 // Definindo os pinos dos motores de acordo com as conexões entre a Ponte H e o Arduino (vide esquema do circuito)
 
 // Motor A (esq.)
-const enA = 8;
-const IN1 = 12;
-const IN2 = 11;
+const int enA = 8;
+const int IN1 = 12;
+const int IN2 = 11;
 // Motor B (dir.)
-const enB = 7;
-const IN3 = 10;
-const IN4 = 9;
+const int enB = 7;
+const int IN3 = 10;
+const int IN4 = 9;
 
 // Velocidades: vão de 0 a 255 e, portanto, deve-se usar analogWrite (valor analógico)
 int velocidadeA = 255;
