@@ -2,9 +2,9 @@
 
 
 
-#define R_S A7 // Sensor lateral direita 
+#define R_S A0 // Sensor lateral direita 
 
-#define L_S AD // Sensor lateral esquerda
+#define L_S A7 // Sensor lateral esquerda
 
 // Definindo os pinos dos motores de acordo com as conexões entre a Ponte H e o Arduino (vide esquema do circuito)
 
