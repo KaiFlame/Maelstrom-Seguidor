@@ -38,17 +38,6 @@ void setup(){
   Serial.begin(9600);
 }
 
-void loop(){  
-
-if((digitalRead(R_S) == 0)&&(digitalRead(L_S) == 0)){Afrente();}   //Se o sensor direito e o sensor esquerdo estiverem na cor branca, ele chamará a função Afrente (Andar para frente)
-
-if((digitalRead(R_S) == 1)&&(digitalRead(L_S) == 0)){Vdireita();} //Se o sensor direito for preto e o sensor esquerdo for branco, ele chamará a função Vdireita (Virar à direita)
-
-if((digitalRead(R_S) == 0)&&(digitalRead(L_S) == 1)){Vesquerda();}  //se o sensor direito for branco e o sensor esquerdo for preto, ele chamará a função Vesquerda (Virar à esquerda)
-
-if((digitalRead(R_S) == 1)&&(digitalRead(L_S) == 1)){Parar();} //Se o sensor direito e o sensor esquerdo estiverem na cor preta, ele chamará a função Parar
-
-}
 
 
 
@@ -105,5 +94,18 @@ void Parar(){   //Parado
   delay(2000);
   Serial.print("carlos//"); 
 }
+
+void loop(){  
+
+if((digitalRead(R_S) == 0)&&(digitalRead(L_S) == 0)){Afrente();}   //Se o sensor direito e o sensor esquerdo estiverem na cor branca, ele chamará a função Afrente (Andar para frente)
+
+if((digitalRead(R_S) == 1)&&(digitalRead(L_S) == 0)){Vdireita();} //Se o sensor direito for preto e o sensor esquerdo for branco, ele chamará a função Vdireita (Virar à direita)
+
+if((digitalRead(R_S) == 0)&&(digitalRead(L_S) == 1)){Vesquerda();}  //se o sensor direito for branco e o sensor esquerdo for preto, ele chamará a função Vesquerda (Virar à esquerda)
+
+if((digitalRead(R_S) == 1)&&(digitalRead(L_S) == 1)){Parar();} //Se o sensor direito e o sensor esquerdo estiverem na cor preta, ele chamará a função Parar
+
+}
+
 
 
