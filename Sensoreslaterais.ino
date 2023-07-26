@@ -60,6 +60,7 @@ void Afrente(){   // Mover-se para a frente.
   digitalWrite(IN3, HIGH);
   digitalWrite(IN4, LOW);
   delay(2000);
+  Serial.print(); 
 }
 
 void Vesquerda(){   //Virar para a esquerda.
@@ -70,6 +71,7 @@ void Vesquerda(){   //Virar para a esquerda.
   digitalWrite(IN3, HIGH);
   digitalWrite(IN4, LOW);
   delay(2000);
+  Serial.print(); 
 }
   
 void Vdireita(){ //Virar para a direita
@@ -81,6 +83,7 @@ void Vdireita(){ //Virar para a direita
   digitalWrite(IN3, LOW);
   digitalWrite(IN4, LOW);
   delay(2000);
+  Serial.print(); 
 }
 
 void Parar(){   //Parado
@@ -91,4 +94,5 @@ void Parar(){   //Parado
   digitalWrite(IN3, LOW);
   digitalWrite(IN4, LOW);
   delay(2000);
+  Serial.print(); 
 }
