@@ -38,53 +38,6 @@ void setup(){
   Serial.begin(9600);
 }
 
-
-
-void Afrente(){   // Mover-se para a frente.
-  // Motor A para frente
-  digitalWrite(IN1, HIGH);
-  digitalWrite(IN2, LOW);
-  // Motor B para frente
-  digitalWrite(IN3, HIGH);
-  digitalWrite(IN4, LOW);
-  delay(250);
-  Serial.print("batata//"); 
-}
-
-void Vesquerda(){   //Virar para a esquerda.
-  // Motor A parado
-  digitalWrite(IN1, LOW);
-  digitalWrite(IN2, LOW);
-  // Motor B para frente
-  digitalWrite(IN3, HIGH);
-  digitalWrite(IN4, LOW);
-  delay(250);
-  Serial.print("arroz//"); 
-}
-  
-void Vdireita(){ //Virar para a direita
-   
-  // Motor A para frente
-  digitalWrite(IN1, HIGH);
-  digitalWrite(IN2, LOW);
-  // Motor B parado
-  digitalWrite(IN3, LOW);
-  digitalWrite(IN4, LOW);
-  delay(250);
-  Serial.print("gilmar//"); 
-}
-
-void Parar(){   //Parado
-  // Motor A parado
-  digitalWrite(IN1, LOW);
-  digitalWrite(IN2, LOW);
-  // Motor B para frente
-  digitalWrite(IN3, LOW);
-  digitalWrite(IN4, LOW);
-  delay(250);
-  Serial.print("carlos//"); 
-}
-
 void loop(){  
 
 if((digitalRead(R_S) == 0)&&(digitalRead(L_S) == 0)){Afrente();}   //Se o sensor direito e o sensor esquerdo estiverem na cor branca, ele chamará a função Afrente (Andar para frente)
@@ -96,4 +49,61 @@ if((digitalRead(R_S) == 0)&&(digitalRead(L_S) == 1)){Vesquerda();}  //se o senso
 if((digitalRead(R_S) == 1)&&(digitalRead(L_S) == 1)){Parar();} //Se o sensor direito e o sensor esquerdo estiverem na cor preta, ele chamará a função Parar
 
 }
+
+
+
+
+void Afrente(){   // Mover-se para a frente.
+  // Motor A para frente
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+  // Motor B para frente
+  digitalWrite(IN3, HIGH);
+  digitalWrite(IN4, LOW);
+  analogWrite(enA, velocidadeA);
+  analogWrite(enB, velocidadeB); 
+  delay(2000);
+  Serial.print("batata//"); 
+}
+
+void Vesquerda(){   //Virar para a esquerda.
+  // Motor A parado
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, LOW);
+  // Motor B para frente
+  digitalWrite(IN3, HIGH);
+  digitalWrite(IN4, LOW);
+  analogWrite(enA, velocidadeA);
+  analogWrite(enB, velocidadeB); 
+  delay(2000);
+  Serial.print("arroz//"); 
+}
+  
+void Vdireita(){ //Virar para a direita
+   
+  // Motor A para frente
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+  // Motor B parado
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, LOW);
+  analogWrite(enA, velocidadeA);
+  analogWrite(enB, velocidadeB); 
+  delay(2000);
+  Serial.print("gilmar//"); 
+}
+
+void Parar(){   //Parado
+  // Motor A parado
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, LOW);
+  // Motor B para frente
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, LOW);
+  analogWrite(enA, velocidadeA);
+  analogWrite(enB, velocidadeB); 
+  delay(2000);
+  Serial.print("carlos//"); 
+}
+
 
