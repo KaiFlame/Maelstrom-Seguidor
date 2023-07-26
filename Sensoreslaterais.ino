@@ -34,7 +34,7 @@ void setup(){
   //Sensores
   pinMode(R_S, INPUT); 
   pinMode(L_S, INPUT); 
-  delay(1000);
+  delay(125);
   Serial.begin(9600);
 }
 
@@ -60,7 +60,7 @@ void Afrente(){   // Mover-se para a frente.
   // Motor B para frente
   digitalWrite(IN3, HIGH);
   digitalWrite(IN4, LOW);
-  delay(2000);
+  delay(250);
   Serial.print("batata//"); 
 }
 
@@ -71,7 +71,7 @@ void Vesquerda(){   //Virar para a esquerda.
   // Motor B para frente
   digitalWrite(IN3, HIGH);
   digitalWrite(IN4, LOW);
-  delay(2000);
+  delay(250);
   Serial.print("arroz//"); 
 }
   
@@ -83,7 +83,7 @@ void Vdireita(){ //Virar para a direita
   // Motor B parado
   digitalWrite(IN3, LOW);
   digitalWrite(IN4, LOW);
-  delay(2000);
+  delay(250);
   Serial.print("gilmar//"); 
 }
 
@@ -94,6 +94,6 @@ void Parar(){   //Parado
   // Motor B para frente
   digitalWrite(IN3, LOW);
   digitalWrite(IN4, LOW);
-  delay(2000);
+  delay(250);
   Serial.print("carlos//"); 
 }
