@@ -35,6 +35,7 @@ void setup(){
   pinMode(R_S, INPUT); 
   pinMode(L_S, INPUT); 
   delay(1000);
+  Serial.begin(9600);
 }
 
 void loop(){  
